@@ -1,81 +1,242 @@
-/*
-SCSS variables are information about icon's compiled state, stored under its original file name
+// SCSS variables are information about icon's compiled state, stored under its original file name
+//
+// .icon-home {
+//   width: $icon-home-width;
+// }
+//
+// The large array-like variables contain all information about a single icon
+// $icon-home: x y offset_x offset_y width height total_width total_height image_path;
+//
+// At the bottom of this section, we provide information about the spritesheet itself
+// $spritesheet: width height image $spritesheet-sprites;
+$icon-addr-name: 'icon-addr';
+$icon-addr-x: 269px;
+$icon-addr-y: 108px;
+$icon-addr-offset-x: -269px;
+$icon-addr-offset-y: -108px;
+$icon-addr-width: 12px;
+$icon-addr-height: 16px;
+$icon-addr-total-width: 297px;
+$icon-addr-total-height: 194px;
+$icon-addr-image: '../img/icon-set.png';
+$icon-addr: (269px, 108px, -269px, -108px, 12px, 16px, 297px, 194px, '../img/icon-set.png', 'icon-addr', );
+$icon-bank-name: 'icon-bank';
+$icon-bank-x: 61px;
+$icon-bank-y: 0px;
+$icon-bank-offset-x: -61px;
+$icon-bank-offset-y: 0px;
+$icon-bank-width: 60px;
+$icon-bank-height: 60px;
+$icon-bank-total-width: 297px;
+$icon-bank-total-height: 194px;
+$icon-bank-image: '../img/icon-set.png';
+$icon-bank: (61px, 0px, -61px, 0px, 60px, 60px, 297px, 194px, '../img/icon-set.png', 'icon-bank', );
+$icon-chem-hover-name: 'icon-chem-hover';
+$icon-chem-hover-x: 166px;
+$icon-chem-hover-y: 135px;
+$icon-chem-hover-offset-x: -166px;
+$icon-chem-hover-offset-y: -135px;
+$icon-chem-hover-width: 60px;
+$icon-chem-hover-height: 49px;
+$icon-chem-hover-total-width: 297px;
+$icon-chem-hover-total-height: 194px;
+$icon-chem-hover-image: '../img/icon-set.png';
+$icon-chem-hover: (166px, 135px, -166px, -135px, 60px, 49px, 297px, 194px, '../img/icon-set.png', 'icon-chem-hover', );
+$icon-chem-name: 'icon-chem';
+$icon-chem-x: 106px;
+$icon-chem-y: 135px;
+$icon-chem-offset-x: -106px;
+$icon-chem-offset-y: -135px;
+$icon-chem-width: 60px;
+$icon-chem-height: 49px;
+$icon-chem-total-width: 297px;
+$icon-chem-total-height: 194px;
+$icon-chem-image: '../img/icon-set.png';
+$icon-chem: (106px, 135px, -106px, -135px, 60px, 49px, 297px, 194px, '../img/icon-set.png', 'icon-chem', );
+$icon-dnk-hover-name: 'icon-dnk-hover';
+$icon-dnk-hover-x: 53px;
+$icon-dnk-hover-y: 135px;
+$icon-dnk-hover-offset-x: -53px;
+$icon-dnk-hover-offset-y: -135px;
+$icon-dnk-hover-width: 53px;
+$icon-dnk-hover-height: 59px;
+$icon-dnk-hover-total-width: 297px;
+$icon-dnk-hover-total-height: 194px;
+$icon-dnk-hover-image: '../img/icon-set.png';
+$icon-dnk-hover: (53px, 135px, -53px, -135px, 53px, 59px, 297px, 194px, '../img/icon-set.png', 'icon-dnk-hover', );
+$icon-dnk-name: 'icon-dnk';
+$icon-dnk-x: 0px;
+$icon-dnk-y: 135px;
+$icon-dnk-offset-x: 0px;
+$icon-dnk-offset-y: -135px;
+$icon-dnk-width: 53px;
+$icon-dnk-height: 59px;
+$icon-dnk-total-width: 297px;
+$icon-dnk-total-height: 194px;
+$icon-dnk-image: '../img/icon-set.png';
+$icon-dnk: (0px, 135px, 0px, -135px, 53px, 59px, 297px, 194px, '../img/icon-set.png', 'icon-dnk', );
+$icon-doc-hover-name: 'icon-doc-hover';
+$icon-doc-hover-x: 0px;
+$icon-doc-hover-y: 65px;
+$icon-doc-hover-offset-x: 0px;
+$icon-doc-hover-offset-y: -65px;
+$icon-doc-hover-width: 49px;
+$icon-doc-hover-height: 70px;
+$icon-doc-hover-total-width: 297px;
+$icon-doc-hover-total-height: 194px;
+$icon-doc-hover-image: '../img/icon-set.png';
+$icon-doc-hover: (0px, 65px, 0px, -65px, 49px, 70px, 297px, 194px, '../img/icon-set.png', 'icon-doc-hover', );
+$icon-doc-name: 'icon-doc';
+$icon-doc-x: 49px;
+$icon-doc-y: 65px;
+$icon-doc-offset-x: -49px;
+$icon-doc-offset-y: -65px;
+$icon-doc-width: 49px;
+$icon-doc-height: 70px;
+$icon-doc-total-width: 297px;
+$icon-doc-total-height: 194px;
+$icon-doc-image: '../img/icon-set.png';
+$icon-doc: (49px, 65px, -49px, -65px, 49px, 70px, 297px, 194px, '../img/icon-set.png', 'icon-doc', );
+$icon-galst-hover-name: 'icon-galst-hover';
+$icon-galst-hover-x: 179px;
+$icon-galst-hover-y: 50px;
+$icon-galst-hover-offset-x: -179px;
+$icon-galst-hover-offset-y: -50px;
+$icon-galst-hover-width: 64px;
+$icon-galst-hover-height: 50px;
+$icon-galst-hover-total-width: 297px;
+$icon-galst-hover-total-height: 194px;
+$icon-galst-hover-image: '../img/icon-set.png';
+$icon-galst-hover: (179px, 50px, -179px, -50px, 64px, 50px, 297px, 194px, '../img/icon-set.png', 'icon-galst-hover', );
+$icon-galst-name: 'icon-galst';
+$icon-galst-x: 179px;
+$icon-galst-y: 0px;
+$icon-galst-offset-x: -179px;
+$icon-galst-offset-y: 0px;
+$icon-galst-width: 64px;
+$icon-galst-height: 50px;
+$icon-galst-total-width: 297px;
+$icon-galst-total-height: 194px;
+$icon-galst-image: '../img/icon-set.png';
+$icon-galst: (179px, 0px, -179px, 0px, 64px, 50px, 297px, 194px, '../img/icon-set.png', 'icon-galst', );
+$icon-house-name: 'icon-house';
+$icon-house-x: 243px;
+$icon-house-y: 130px;
+$icon-house-offset-x: -243px;
+$icon-house-offset-y: -130px;
+$icon-house-width: 24px;
+$icon-house-height: 23px;
+$icon-house-total-width: 297px;
+$icon-house-total-height: 194px;
+$icon-house-image: '../img/icon-set.png';
+$icon-house: (243px, 130px, -243px, -130px, 24px, 23px, 297px, 194px, '../img/icon-set.png', 'icon-house', );
+$icon-pen-hover-name: 'icon-pen-hover';
+$icon-pen-hover-x: 243px;
+$icon-pen-hover-y: 0px;
+$icon-pen-hover-offset-x: -243px;
+$icon-pen-hover-offset-y: 0px;
+$icon-pen-hover-width: 54px;
+$icon-pen-hover-height: 54px;
+$icon-pen-hover-total-width: 297px;
+$icon-pen-hover-total-height: 194px;
+$icon-pen-hover-image: '../img/icon-set.png';
+$icon-pen-hover: (243px, 0px, -243px, 0px, 54px, 54px, 297px, 194px, '../img/icon-set.png', 'icon-pen-hover', );
+$icon-pen-name: 'icon-pen';
+$icon-pen-x: 243px;
+$icon-pen-y: 54px;
+$icon-pen-offset-x: -243px;
+$icon-pen-offset-y: -54px;
+$icon-pen-width: 54px;
+$icon-pen-height: 54px;
+$icon-pen-total-width: 297px;
+$icon-pen-total-height: 194px;
+$icon-pen-image: '../img/icon-set.png';
+$icon-pen: (243px, 54px, -243px, -54px, 54px, 54px, 297px, 194px, '../img/icon-set.png', 'icon-pen', );
+$icon-person-name: 'icon-person';
+$icon-person-x: 243px;
+$icon-person-y: 153px;
+$icon-person-offset-x: -243px;
+$icon-person-offset-y: -153px;
+$icon-person-width: 20px;
+$icon-person-height: 24px;
+$icon-person-total-width: 297px;
+$icon-person-total-height: 194px;
+$icon-person-image: '../img/icon-set.png';
+$icon-person: (243px, 153px, -243px, -153px, 20px, 24px, 297px, 194px, '../img/icon-set.png', 'icon-person', );
+$icon-ticks-name: 'icon-ticks';
+$icon-ticks-x: 243px;
+$icon-ticks-y: 108px;
+$icon-ticks-offset-x: -243px;
+$icon-ticks-offset-y: -108px;
+$icon-ticks-width: 26px;
+$icon-ticks-height: 22px;
+$icon-ticks-total-width: 297px;
+$icon-ticks-total-height: 194px;
+$icon-ticks-image: '../img/icon-set.png';
+$icon-ticks: (243px, 108px, -243px, -108px, 26px, 22px, 297px, 194px, '../img/icon-set.png', 'icon-ticks', );
+$icon-vesi-hover-name: 'icon-vesi-hover';
+$icon-vesi-hover-x: 121px;
+$icon-vesi-hover-y: 58px;
+$icon-vesi-hover-offset-x: -121px;
+$icon-vesi-hover-offset-y: -58px;
+$icon-vesi-hover-width: 58px;
+$icon-vesi-hover-height: 58px;
+$icon-vesi-hover-total-width: 297px;
+$icon-vesi-hover-total-height: 194px;
+$icon-vesi-hover-image: '../img/icon-set.png';
+$icon-vesi-hover: (121px, 58px, -121px, -58px, 58px, 58px, 297px, 194px, '../img/icon-set.png', 'icon-vesi-hover', );
+$icon-vesi-name: 'icon-vesi';
+$icon-vesi-x: 121px;
+$icon-vesi-y: 0px;
+$icon-vesi-offset-x: -121px;
+$icon-vesi-offset-y: 0px;
+$icon-vesi-width: 58px;
+$icon-vesi-height: 58px;
+$icon-vesi-total-width: 297px;
+$icon-vesi-total-height: 194px;
+$icon-vesi-image: '../img/icon-set.png';
+$icon-vesi: (121px, 0px, -121px, 0px, 58px, 58px, 297px, 194px, '../img/icon-set.png', 'icon-vesi', );
+$icon-zont-name: 'icon-zont';
+$icon-zont-x: 0px;
+$icon-zont-y: 0px;
+$icon-zont-offset-x: 0px;
+$icon-zont-offset-y: 0px;
+$icon-zont-width: 61px;
+$icon-zont-height: 65px;
+$icon-zont-total-width: 297px;
+$icon-zont-total-height: 194px;
+$icon-zont-image: '../img/icon-set.png';
+$icon-zont: (0px, 0px, 0px, 0px, 61px, 65px, 297px, 194px, '../img/icon-set.png', 'icon-zont', );
+$spritesheet-width: 297px;
+$spritesheet-height: 194px;
+$spritesheet-image: '../img/icon-set.png';
+$spritesheet-sprites: ($icon-addr, $icon-bank, $icon-chem-hover, $icon-chem, $icon-dnk-hover, $icon-dnk, $icon-doc-hover, $icon-doc, $icon-galst-hover, $icon-galst, $icon-house, $icon-pen-hover, $icon-pen, $icon-person, $icon-ticks, $icon-vesi-hover, $icon-vesi, $icon-zont, );
+$spritesheet: (297px, 194px, '../img/icon-set.png', $spritesheet-sprites, );
 
-.icon-home {
-  width: $icon-home-width;
-}
-
-The large array-like variables contain all information about a single icon
-$icon-home: x y offset_x offset_y width height total_width total_height image_path;
-
-At the bottom of this section, we provide information about the spritesheet itself
-$spritesheet: width height image $spritesheet-sprites;
-*/
-$mail-name: 'mail';
-$mail-x: 15px;
-$mail-y: 0px;
-$mail-offset-x: -15px;
-$mail-offset-y: 0px;
-$mail-width: 20px;
-$mail-height: 16px;
-$mail-total-width: 35px;
-$mail-total-height: 35px;
-$mail-image: 'icon-set.png';
-$mail: (15px, 0px, -15px, 0px, 20px, 16px, 35px, 35px, 'icon-set.png', 'mail', );
-$map-name: 'map';
-$map-x: 0px;
-$map-y: 0px;
-$map-offset-x: 0px;
-$map-offset-y: 0px;
-$map-width: 15px;
-$map-height: 23px;
-$map-total-width: 35px;
-$map-total-height: 35px;
-$map-image: 'icon-set.png';
-$map: (0px, 0px, 0px, 0px, 15px, 23px, 35px, 35px, 'icon-set.png', 'map', );
-$person-name: 'person';
-$person-x: 0px;
-$person-y: 23px;
-$person-offset-x: 0px;
-$person-offset-y: -23px;
-$person-width: 11px;
-$person-height: 12px;
-$person-total-width: 35px;
-$person-total-height: 35px;
-$person-image: 'icon-set.png';
-$person: (0px, 23px, 0px, -23px, 11px, 12px, 35px, 35px, 'icon-set.png', 'person', );
-$spritesheet-width: 35px;
-$spritesheet-height: 35px;
-$spritesheet-image: 'icon-set.png';
-$spritesheet-sprites: ($mail, $map, $person, );
-$spritesheet: (35px, 35px, 'icon-set.png', $spritesheet-sprites, );
-
-/*
-The provided mixins are intended to be used with the array-like variables
-
-.icon-home {
-  @include sprite-width($icon-home);
-}
-
-.icon-email {
-  @include sprite($icon-email);
-}
-
-Example usage in HTML:
-
-`display: block` sprite:
-<div class="icon-home"></div>
-
-To change `display` (e.g. `display: inline-block;`), we suggest using a common CSS class:
-
-// CSS
-.icon {
-  display: inline-block;
-}
-
-// HTML
-<i class="icon icon-home"></i>
-*/
+// The provided mixins are intended to be used with the array-like variables
+//
+// .icon-home {
+//   @include sprite-width($icon-home);
+// }
+//
+// .icon-email {
+//   @include sprite($icon-email);
+// }
+//
+// Example usage in HTML:
+//
+// `display: block` sprite:
+// <div class="icon-home"></div>
+//
+// To change `display` (e.g. `display: inline-block;`), we suggest using a common CSS class:
+//
+// // CSS
+// .icon {
+//   display: inline-block;
+// }
+//
+// // HTML
+// <i class="icon icon-home"></i>
 @mixin sprite-width($sprite) {
   width: nth($sprite, 5);
 }
@@ -102,12 +263,10 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
   @include sprite-height($sprite);
 }
 
-/*
-The `sprites` mixin generates identical output to the CSS template
-  but can be overridden inside of SCSS
-
-@include sprites($spritesheet-sprites);
-*/
+// The `sprites` mixin generates identical output to the CSS template
+//   but can be overridden inside of SCSS
+//
+// @include sprites($spritesheet-sprites);
 @mixin sprites($sprites) {
   @each $sprite in $sprites {
     $sprite-name: nth($sprite, 10);

@@ -33,27 +33,98 @@
 /*-------------------------------------------------*/
 @include sprites($spritesheet-sprites);
 .icon{
-    display: inline-block;
+    @extend .dib;
 }
+
+
 /*-------------------------------------------------*/
 /*  author styles
 /*-------------------------------------------------*/
-$container-width: 1200px;
+
+$brown: #6e392b;
+
+
+
+/*-------------------------------------------------*/
+/*  elements
+/*-------------------------------------------------*/
+
 body{
-    $max-width: $container-width;
-    background-color: white;
+  font-family:"Gotham Pro";
+  font-size: 13px;
+  line-height:18/13+em;
+  color: #373737;
+  background-color: #fff;
 }
 
 .container{
-    width: $container-width;
-    margin: auto;
+  width: 1184px;
+  margin: 0 auto;
 }
 
-$second-color: #2d2c32;
+h2,.h2{
+  font-size: 30px;
+  font-weight: 500;
+  line-height: 1em;
+  color: #352b28;
+}
+
+h3,.h3{
+  font-size: 16px;
+  font-weight: 500;
+  line-height:21/16+em;
+}
+
+.main-logo{
+  @extend .dib;
+  background-color: $brown;
+  padding: 33px 30px;
+}
+
+/*-------------------------------------------------*/
+/*  main-header
+/*-------------------------------------------------*/
+
+.white-clr{
+  color: white;
+}
+
+.main-logo{
+  position: absolute;
+  top: 0;
+  left: 0;
+  &__wrap{
+    position: relative;
+  }
+}
+.main-header{
+    
+    @extend .clearfix;
+    .callback-info{
+        float: right;
+    }
+    
+    &__top{
+
+        color: white;
+        background-color: #352b28;
+        .container{
+            padding-left: 200px;    
+            position: relative;
+        }
+    }
+}
+
+
 
 /*-------------------------------------------------*/
 /*  helper classes
 /*-------------------------------------------------*/
+
+.dib{
+    display: inline-block;
+    vertical-align: middle;
+}
 
 .fl-left{
     float: left;
