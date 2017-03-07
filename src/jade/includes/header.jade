@@ -1,17 +1,32 @@
-// ===== header =========
-.main-header
-	.container.main-logo__wrap
-		.main-logo
-			img(src="img/logo.png" alt="ФОРТУНА - юридический центр")
+// ======= header ======= 
+header.main-header
 	.main-header__top
 		.container
+			button.resp-nav.vis-767: i.icm.icon-menu
 			span.addr
-				i.icon.icon-addr
-				| м. Щукинская, ул. Маршала Василевского, д. 17, 3 этаж
+				a(target="_blank" href="https://yandex.ru/maps/213/moscow/?ncrnd=4607&text=%D0%BC.%20%D0%A9%D1%83%D0%BA%D0%B8%D0%BD%D1%81%D0%BA%D0%B0%D1%8F%2C%20%D1%83%D0%BB.%20%D0%9C%D0%B0%D1%80%D1%88%D0%B0%D0%BB%D0%B0%20%D0%92%D0%B0%D1%81%D0%B8%D0%BB%D0%B5%D0%B2%D1%81%D0%BA%D0%BE%D0%B3%D0%BE%2C%20%D0%B4.%2017%2C%203%20%D1%8D%D1%82%D0%B0%D0%B6&sll=34.363731%2C53.243325&sspn=0.256462%2C0.085262&mode=search&ol=geo&ouri=ymapsbm1%3A%2F%2Fgeo%3Fll%3D37.462%252C55.809%26spn%3D0.001%252C0.001%26text%3D%25D0%25A0%25D0%25BE%25D1%2581%25D1%2581%25D0%25B8%25D1%258F%252C%2520%25D0%259C%25D0%25BE%25D1%2581%25D0%25BA%25D0%25B2%25D0%25B0%252C%2520%25D1%2583%25D0%25BB%25D0%25B8%25D1%2586%25D0%25B0%2520%25D0%259C%25D0%25B0%25D1%2580%25D1%2588%25D0%25B0%25D0%25BB%25D0%25B0%2520%25D0%2592%25D0%25B0%25D1%2581%25D0%25B8%25D0%25BB%25D0%25B5%25D0%25B2%25D1%2581%25D0%25BA%25D0%25BE%25D0%25B3%25D0%25BE%252C%252017&ll=37.462316%2C55.808923&z=17"): i.icon.icon-addr.l
+				| м. Щукинская, ул. Маршала Василевского, д. 17, 3 этаж 
 			.phone-info
-				span Звонок по России бесплатный
-				span.tel +7 (495) 968 30 80
-				a.btn.btn--brown(href="#") Заказать звонок
+				span.hide-480 Звонок по России бесплатный
+				span.tel <a href="+74959683080">+7 (495) <span class="white-clr">968 30 80</span></a>
+				a.btn.btn--brown(href="#callback").fancybox Заказать звонок
 	.main-header__bot
-// ===== header end =====
 
+		.container 
+			.main-logo
+				a(href="/"): img(src="img/logo.png" alt="ФОРТУНА - юридический центр")
+			.wrap
+				.main-menu
+					button.close.vis-767
+					ul
+						li.active: a(href="/") Главная
+						li: a(href="about.html") О нас
+						li: a(href="services.html") Услуги
+						li: a(href="about.html") Наши юристы
+						li: a(href="prices.html") Цены
+						li: a(href="contacts.html") Контакты
+				.slogan
+					.inner 
+						i.icon.icon-ticks
+						| Когда другие обещают, <span>мы делаем!</span>
+// ===== header end ===== 

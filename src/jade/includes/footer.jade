@@ -1,0 +1,48 @@
+// footer
+footer.main-footer
+	.container
+		.row
+			.left
+				.footer-logo
+					a(href="/"): img(src="img/footer-logo.png", alt="")
+				p Московская юридический центр оказание юридических услуг, помощь адвоката (юриста) в Москве
+				p ООО «Фортуна». Все права защищены. Карта сайта / Мобильная версия
+			.footer-col.footer-col--menu
+				.footer-title Карта сайта
+				ul
+					li: a(href="#") Главная
+					li: a(href="#") О на
+					li: a(href="#") Услуги
+					li: a(href="#") Наши юристы
+					li: a(href="#") Цены
+					li: a(href="#") Контакты
+			.footer-col.footer-col--contacts
+				.footer-title Контактная информация
+				ul
+					li м. Щукинская, <br> ул. Маршала Василевского, <br> д. 17, 3 этаж
+					li.email
+						span Email
+						a(href="mailto:uristmsk24@gmail.com") uristmsk24@gmail.com
+			.footer-col.footer-col--phone
+				.footer-title Телефон
+				ul
+					li.phone
+						a(href="tel:+74959683080") <span>+7 (495) </span>968 30 80
+						span Звонок по России бесплатный
+					li: a(href="#callback").fancybox.btn.btn--brown Заказать звонок
+// footer end
+
+// ======= popups ======= 
+#callback.popup.hidden
+	button.close: img(src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAALCAYAAABGbhwYAAAAr0lEQVQoU22RwQ2CQBBF/4+xgG1gDkvijRM1WAstWIutaAl6UG4mEN0GKMAIZhYWRmROk/kvO3/+EgDynfjqERrtl5U0asMPTwCae/3aW9BqzEUctxEsAJwTbCBP8Mi4egH3m74ct0ToVj/LCK7AcZagoTeVZ1IQvIwj9ZwleX5xPsoDaAE463nwaCBd1727w/JAG89kfO3AKR6CV73ux/OcRjvFU4Wgvv5/RsSp9gXv/laYrPzBrwAAAABJRU5ErkJggg==", alt="")
+	.popup__header
+		| Заказать обратный звонок
+		p.small Заполните форму и наши специалисты свяжутся с вами
+	.popup__body
+		form(action="#")
+			input(type="hidden" name="subject" value="Форма заказа звонка")
+			input(type="text" placeholder="Ваше имя")
+			input(type="tel" placeholder="Телефон")
+			input(type="email" placeholder="E-mail")
+			input(type="submit" value="Отправить заявку").btn.btn--brown
+// ===== popups end ===== 
